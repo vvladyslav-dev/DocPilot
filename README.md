@@ -4,6 +4,8 @@ DocPilot is a parser that analyses various PDF documents and returns the structu
 
 Upload several PDF documents (invoices, receipts, contracts, etc.), specify which fields you want extracted or any filters to apply (e.g., date range, totals > 1000) in the prompt, run the parser, and download the cleaned results as CSV or XLSX.
 
+DocPilot also supports scans and can process low-quality documents.
+
 ## Use cases
 
 Below are several practical scenarios that demonstrate the capabilities of the application and show how it can be used in real-world tasks.
