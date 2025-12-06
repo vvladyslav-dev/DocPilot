@@ -134,10 +134,25 @@ def main() -> None:
         if uploaded_files:
             st.success(f"✅ Uploaded files: {len(uploaded_files)}")
 
-        # Extraction instruction UI removed — use default extraction or configure
-        # extraction instruction programmatically via application settings or
-        # downstream LLM configuration. The `user_instruction` session state
-        # remains available if templates are added later.
+        st.subheader("2️⃣ Extraction Instruction")
+
+        # Keep only the free-form prompt input. Previously there was a
+        # `Document type` selectbox that prefilling the placeholder; it has been
+        # removed per user request. Use a sensible default placeholder.
+        placeholder_text = (
+            "Example: Extract invoice_number, date, vendor, total_amount, currency. Return a table with these columns."
+        )
+
+        st.session_state.user_instruction = st.text_area(
+            "Describe what to extract",
+            value=st.session_state.user_instruction,
+            height=140,
+            placeholder=placeholder_text,
+            help=(
+                "Free form. Specify EXACTLY which fields or columns to return. "
+                "Leave empty to run the default 'extract all' instruction."
+            ),
+        )
 
         st.subheader("🔑 Gemini API Key")
         gemini_key = (settings.gemini_api_key or "").strip()
