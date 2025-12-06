@@ -178,7 +178,7 @@ Documents are processed sequentially inside a batch, with dedicated logging for 
 
 Ensure dependencies are installed inside the active virtual environment:
 ```bash
-pip install -r requirements.txtа 
+pip install -r requirements.txt
 ```
 
 ### The initial run is slow
