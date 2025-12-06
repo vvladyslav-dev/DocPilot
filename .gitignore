@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.pytest_cache/
+.mypy_cache/
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Logs
+*.log
+
+# dotenv
+.env
+.env.*
+
+# Docker
+docker-compose.override.yml
+**/docker-compose.override.yml
+
+# DocPilot generated folders
+temp/
+temp/uploads/
+temp/exports/
+
+# Data / artifacts
+data/
+artifacts/
+DOCLING_ARTIFACTS_PATH
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Tests
+.coverage
+htmlcov/
+
+# Local python cache
+pip-log.txt
+
+# Misc
+*.pem
+*.key
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Node
+node_modules/
+
+# VS Code workspace storage
+.vscode/
+
+# Ignore IDE project files
+/.idea/
+
+# Ignore secrets
+secrets.json
+
+# Ignore system-specific python virtualenv metadata
+.python-eggs/
+
+# End of file

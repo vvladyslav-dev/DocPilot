@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  docpilot:
+    build: .
+    image: docpilot:local
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./temp:/app/temp
+      - ./artifacts:/artifacts
+    environment:
+      - DOCLING_ARTIFACTS_PATH=/artifacts
+      - MAX_FILES_UPLOAD=10
+      - DOCLING_USE_OCR=true
+      - DOCLING_PIPELINE=standard
+    restart: unless-stopped
